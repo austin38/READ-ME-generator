@@ -1,35 +1,40 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require('util');
 // TODO: Create an array of questions for user input
 inquirer
     .prompt([
         {
             type: "input",
             message: "What is the title of your project?",
-            name: "title"
+            name: "title",
         },
         {
             type: "input",
             message: "Enter a description for your project:",
-            name: "description"
+            name: "description",
         },
         {
             type: "input",
-            message: "Enter installation instructions as a comma separated list:",
-            name: "install"
+            message: "Enter your Github username:",
+            name: "github"
         },
         {
             type: "input",
-            message: "Enter usage information for your project:",
-            name: "usage"
+            message: "Please enter your email",
+            name: "email"
         },
         {
-            type: "input",
-            message: "Enter contribution guirelines for your project:"
-            name: "contribution"
-        }
+            type: "list",
+            message: "Which license does this project fall under?",
+            name: "license",
+            choices: [
+                "MIT",
+                "APACHE 2.0",
+                "GPL 3.0",
+                "BSD",
+                "None"
+        },
     ])
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
