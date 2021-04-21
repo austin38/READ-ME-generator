@@ -1,9 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const util = require('util');
+
 // TODO: Create an array of questions for user input
-inquirer
-    .prompt([
+function promptUser () {
+    return inquirer.prompt ([
         {
             type: "input",
             message: "What is the title of your project?",
@@ -11,7 +13,7 @@ inquirer
         },
         {
             type: "input",
-            message: "Enter a description for your project:",
+            message: "Enter a description for your project(installation instructions, usage info, contribution guidelines, and test instructions):",
             name: "description",
         },
         {
@@ -33,9 +35,11 @@ inquirer
                 "APACHE 2.0",
                 "GPL 3.0",
                 "BSD",
-                "None"
+                "None",
+            ],
         },
     ])
+    }
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 

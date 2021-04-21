@@ -1,8 +1,12 @@
 {
   "name": "read-me-generator",
   "version": "1.0.0",
-  "description": "Readme generator",
+  "description": "An app that will intake user input in order to create a professional README file for your project!",
   "main": "index.js",
+  "dependencies": {
+    "inquirer": "^8.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,15 +15,13 @@
     "url": "git+https://github.com/austin38/READ-ME-generator.git"
   },
   "keywords": [
-    "readme"
+    "readme",
+    "generator"
   ],
   "author": "Austin L",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/austin38/READ-ME-generator/issues"
   },
-  "homepage": "https://github.com/austin38/READ-ME-generator#readme",
-  "dependencies": {
-    "inquirer": "^8.0.0"
-  }
+  "homepage": "https://github.com/austin38/READ-ME-generator#readme"
 }
